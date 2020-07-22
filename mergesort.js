@@ -24,7 +24,7 @@ function mergeSort(array) {
     let leftMostFirst = firstHalf[indexLeftMostFirst];
     let leftMostSecond = secondHalf[indexLeftMostSecond];
 
-    if (leftMostFirst < leftMostSecond) {
+    if (comparator(leftMostFirst, leftMostSecond) === 1) {
       result.push(leftMostFirst); // we're trying to get things in ascending order
       indexLeftMostFirst++;
     } else { // you want to push the smaller value either way
